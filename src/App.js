@@ -5,6 +5,7 @@ import Tasks from './components/Tasks'
 import AddTask from './components/AddTask'
 import Footer from './components/Footer'
 import About from './components/About'
+import Map from './components/maps-project/Map'
 
 function App() {
 
@@ -55,21 +56,22 @@ function App() {
   }
 
   return (
-    <Router>
-      <div className="container">
-        <Header onAdd={() => setShowAddTask(!showAddTask)} showAddTask={showAddTask} />
-        <Routes>
-          <Route path='/' exact element={
-            <>
-            {!showAddTask && <AddTask onAdd={createTask}/>}
-            {tasks.length > 0 ? <Tasks tasks={tasks} onToggle={toggleReminder} onDelete={deleteTask} /> : 'No tasks to show'}
-            </>
-          } />
-          <Route path='/about' element={<About />} />
-        </Routes>
-        <Footer />
-      </div>
-    </Router>
+    <Map />
+    // <Router>
+    //   <div className="container">
+    //     <Header onAdd={() => setShowAddTask(!showAddTask)} showAddTask={showAddTask} />
+    //     <Routes>
+    //       <Route path='/' exact element={
+    //         <>
+    //         {!showAddTask && <AddTask onAdd={createTask}/>}
+    //         {tasks.length > 0 ? <Tasks tasks={tasks} onToggle={toggleReminder} onDelete={deleteTask} /> : 'No tasks to show'}
+    //         </>
+    //       } />
+    //       <Route path='/about' element={<About />} />
+    //     </Routes>
+    //     <Footer />
+    //   </div>
+    // </Router>
   );
 }
 
