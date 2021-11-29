@@ -1,13 +1,17 @@
-import { useState } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Header from './components/Header'
-import Tasks from './components/Tasks'
-import AddTask from './components/AddTask'
-import Footer from './components/Footer'
-import About from './components/About'
+import { useState, useEffect } from 'react'
+// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+// import Header from './components/Header'
+// import Tasks from './components/Tasks'
+// import AddTask from './components/AddTask'
+// import Footer from './components/Footer'
+// import About from './components/About'
 import Map from './components/maps-project/Map'
+import Loader from './components/maps-project/Loader'
+import WildfireHeader from './components/maps-project/WildfireHeader'
 
 function App() {
+  const [eventData, setEventData] = useState([])
+  const [loading, setLoading] = useState(false)
 
   const [showAddTask, setShowAddTask] = useState(true)
 
@@ -38,6 +42,19 @@ function App() {
     }
   ])
 
+  useEffect(() => {
+    const fetchEvents = async() => {
+      setLoading(true)
+      const res = await fetch('/api/v2.1/events')
+      const { events } = await res.json()
+
+      setEventData(events)
+      setLoading(false)
+    }
+
+    fetchEvents()
+  }, [])
+
   // Delete task
   const deleteTask = (id) => {
     setTasks(tasks.filter((task) => task.id !== id))
@@ -56,7 +73,10 @@ function App() {
   }
 
   return (
-    <Map />
+    <div>
+      <WildfireHeader />
+      { !loading ? <Map eventData={eventData} /> : <Loader /> }
+    </div>
     // <Router>
     //   <div className="container">
     //     <Header onAdd={() => setShowAddTask(!showAddTask)} showAddTask={showAddTask} />
