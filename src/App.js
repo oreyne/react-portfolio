@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react'
-// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-// import Header from './components/Header'
-// import Tasks from './components/Tasks'
-// import AddTask from './components/AddTask'
-// import Footer from './components/Footer'
-// import About from './components/About'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Header from './components/Header'
+import Tasks from './components/Tasks'
+import AddTask from './components/AddTask'
+import Footer from './components/Footer'
+import About from './components/About'
 import Map from './components/maps-project/Map'
 import Loader from './components/maps-project/Loader'
 import WildfireHeader from './components/maps-project/WildfireHeader'
@@ -73,25 +73,25 @@ function App() {
   }
 
   return (
-    <div>
-      <WildfireHeader />
-      { !loading ? <Map eventData={eventData} /> : <Loader /> }
-    </div>
-    // <Router>
-    //   <div className="container">
-    //     <Header onAdd={() => setShowAddTask(!showAddTask)} showAddTask={showAddTask} />
-    //     <Routes>
-    //       <Route path='/' exact element={
-    //         <>
-    //         {!showAddTask && <AddTask onAdd={createTask}/>}
-    //         {tasks.length > 0 ? <Tasks tasks={tasks} onToggle={toggleReminder} onDelete={deleteTask} /> : 'No tasks to show'}
-    //         </>
-    //       } />
-    //       <Route path='/about' element={<About />} />
-    //     </Routes>
-    //     <Footer />
-    //   </div>
-    // </Router>
+    // <div>
+    //   <WildfireHeader />
+    //   { !loading ? <Map eventData={eventData} /> : <Loader /> }
+    // </div>
+    <Router>
+      <div className="container">
+        <Header onAdd={() => setShowAddTask(!showAddTask)} showAddTask={showAddTask} />
+        <Routes>
+          <Route path='/' element={
+            <>
+            {!showAddTask && <AddTask onAdd={createTask}/>}
+            {tasks.length > 0 ? <Tasks tasks={tasks} onToggle={toggleReminder} onDelete={deleteTask} /> : 'No tasks to show'}
+            </>
+          } />
+          <Route path='/about' element={<About />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
