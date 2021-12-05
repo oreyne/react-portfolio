@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Header from './components/Header'
-import Tasks from './components/Tasks'
-import AddTask from './components/AddTask'
-import Footer from './components/Footer'
-import About from './components/About'
+import Header from './components/task-tracker-project/Header'
+import Tasks from './components/task-tracker-project/Tasks'
+import AddTask from './components/task-tracker-project/AddTask'
+import Footer from './components/task-tracker-project/Footer'
+import About from './components/task-tracker-project/About'
+import TaskDetails from './components/task-tracker-project/TaskDetails'
 import Map from './components/maps-project/Map'
 import Loader from './components/maps-project/Loader'
 import WildfireHeader from './components/maps-project/WildfireHeader'
@@ -88,6 +89,7 @@ function App() {
             </>
           } />
           <Route path='/about' element={<About />} />
+          <Route path='/task/:id' element={<TaskDetails />} />
         </Routes>
         <Footer />
       </div>
