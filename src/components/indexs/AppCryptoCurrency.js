@@ -26,7 +26,7 @@ const AppCryptoCurrency = () => {
   const filterCoins = coins.filter((coin) => coin.name.toLowerCase().includes(search.toLowerCase()))
 
   return (
-    <div>
+    <div className="crypto-main-container">
       <div className="cripto-header">
         <h1 className="brand"><i className="fas fa-moon"></i>CoinMoon</h1>
         <form>
