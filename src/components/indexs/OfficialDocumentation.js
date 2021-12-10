@@ -1,5 +1,11 @@
-const Welcome = (props) => {
-  return <div>{props.name}</div>
+import { useState } from 'react'
+
+const Welcome = ({name}) => {
+  const [names, setNames] = useState('Oreyne')
+
+  return (
+    <span>{names}</span>
+  )
 }
 
 const OfficialDocumentation = () => {
@@ -12,12 +18,20 @@ const OfficialDocumentation = () => {
   const other = formatName({age: 23})
   const name = 'Hello, world!'
 
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log('stop sending the data')
+  }
+
   return (
     <div>
       <h1>{name}</h1>
       {other}
       <Welcome name="Yo la quiero"/>
       <Welcome name="Yo no voy a estar con nadie"/>
+      <form onSubmit={handleSubmit}>
+        <button type="submit">Send</button>
+      </form>
     </div>
   )
 }
