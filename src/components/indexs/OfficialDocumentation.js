@@ -23,6 +23,10 @@ const OfficialDocumentation = () => {
     console.log('stop sending the data')
   }
 
+  const test = (e) => {
+    console.log(e)
+  }
+
   return (
     <div>
       <h1>{name}</h1>
@@ -30,6 +34,7 @@ const OfficialDocumentation = () => {
       <Welcome name="Yo la quiero"/>
       <Welcome name="Yo no voy a estar con nadie"/>
       <form onSubmit={handleSubmit}>
+        <button onClick={test}>Test</button>
         <button type="submit">Send</button>
       </form>
     </div>
