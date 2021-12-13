@@ -1,6 +1,7 @@
+import { Link } from 'react-router-dom'
+
 import './../../css/portfolio/Video.css'
 import terminal from './../../assets/Airport.mp4'
-import { Link } from 'react-router-dom'
 
 const Video = () => {
   return (
@@ -11,10 +12,10 @@ const Video = () => {
       <div className="content">
         <h1>Web developer</h1>
         <p>This is a React Js website, but find more about me</p>
-      </div>
-      <div>
-        <Link to="/experience" className="btn">Experience</Link>
-        <Link to="/contact" className="btn btn-light">Launch</Link>
+        <div>
+          <Link to="/experience" className="port-btn">Experience</Link>
+          <Link to="/contact" className="port-btn port-btn-light">Launch</Link>
+        </div>
       </div>
     </div>
   )

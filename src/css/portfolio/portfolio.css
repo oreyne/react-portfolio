@@ -1,28 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Outfit:wght@100;300;400;500;600;700;800&display=swap');
 
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: 'Outfit', 'Segoe UI', 'Roboto', 'Oxygen', sans-serif;
-  background: #000;
+  padding: 0;
 }
 
-h1,p,a {
+h1, h4, p, a {
   color: #fff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Outfit', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background: #000;
 }
 
 ul {
   list-style-type: none;
 }
 
-li, a {
+a {
   text-decoration: none;
 }
 
 code {
-  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-.btn {
+.port-btn {
   padding: 12px 32px;
   font-size: 1.2rem;
   text-transform: uppercase;
@@ -32,10 +43,10 @@ code {
   cursor: pointer;
 }
 
-.btn-light {
+.port-btn-light {
   background: rgba(255,255,255,0.2)
 }
 
-.btn:hover {
+.port-btn:hover {
   background: rgba(255,255,255,0.2)
 }
