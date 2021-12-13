@@ -1,7 +1,6 @@
-const ProductCategoryRow = () => {
+const ProductCategoryRow = ({ category }) => {
   return (
-    <div>
-    </div>
+    <h2>{category}</h2>
   )
 }
 
