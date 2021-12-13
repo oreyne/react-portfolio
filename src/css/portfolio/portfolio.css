@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Outfit:wght@100;300;400;500;600;700;800&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Outfit', 'Segoe UI', 'Roboto', 'Oxygen', sans-serif;
+  background: #000;
+}
+
+h1,p,a {
+  color: #fff;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li, a {
+  text-decoration: none;
+}
+
+code {
+  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.btn {
+  padding: 12px 32px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+
+.btn-light {
+  background: rgba(255,255,255,0.2)
+}
+
+.btn:hover {
+  background: rgba(255,255,255,0.2)
+}

@@ -6,6 +6,7 @@ const FilterableProductTable = () => {
 
   const [ search, setSearch ] = useState('')
   const [ temporal, setTemporal ] = useState([])
+
   const [ allData, setAllData ] = useState([
     {category: "Sporting Goods", price: "$49.99", stocked: true, name: "Football", id:"1"},
     {category: "Sporting Goods", price: "$9.99", stocked: true, name: "Baseball", id:"2"},
