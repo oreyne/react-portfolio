@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-
 import './../../css/portfolio/Video.css'
 import terminal from './../../assets/Airport.mp4'
 

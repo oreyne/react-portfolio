@@ -18,7 +18,7 @@ function App() {
         <Route path='/official-docs' element={<OfficialDocumentation />} />
         <Route path='/temperature' element={<TemperatureVeridic />} />
         <Route path='/mock' element={<FilterableProductTable />} />
-        <Route path='/portfolio' element={<Portfolio />} />
+        <Route path='/portfolio/*' element={<Portfolio />} />
       </Routes>
     </Router>
   );
