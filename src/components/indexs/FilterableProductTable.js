@@ -5,7 +5,7 @@ import ProductTable from './../filterable-product-table/ProductTable'
 const FilterableProductTable = () => {
 
   const [ search, setSearch ] = useState('')
-
+  const [ temporal, setTemporal ] = useState([])
   const [ allData, setAllData ] = useState([
     {category: "Sporting Goods", price: "$49.99", stocked: true, name: "Football", id:"1"},
     {category: "Sporting Goods", price: "$9.99", stocked: true, name: "Baseball", id:"2"},
@@ -16,18 +16,18 @@ const FilterableProductTable = () => {
   ])
 
   const onlyStock = (e) => {
-    const result = allData.filter((product) => e.currentTarget.checked === product.stocked)
+    setTemporal(allData.filter((product) => e.currentTarget.checked === product.stocked))
   }
 
   const searching = (e) => {
     setSearch(e.target.value)
-    const result = allData.filter((product) => product.name.includes(e.target.value))
+    setTemporal(allData.filter((product) => product.name.includes(e.target.value)))
   }
 
   return (
     <div>
       <SearchBar searching={searching} onlyStock={onlyStock} search={search} />
-      <ProductTable data={allData} />
+      <ProductTable data={temporal} />
     </div>
   )
 }
