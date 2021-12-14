@@ -4,6 +4,7 @@ import Video from './../portfolio/Video'
 import Footer from './../portfolio/Footer'
 import Experience from './../portfolio/Experience'
 import Training from './../portfolio/Training'
+import Contact from './../portfolio/Contact'
 
 const Portfolio = () => {
   return(
@@ -18,6 +19,7 @@ const Portfolio = () => {
         } />
         <Route path='/experience' element={<Experience />} />
         <Route path='/training' element={<Training />} />
+        <Route path='/contact' element={<Contact />} />
       </Routes>
 
     </>

@@ -9,8 +9,19 @@ const NavBar = () => {
     setClick(!click)
   }
 
+  const [color, setColor] = useState(false)
+  const changeColor = () => {
+    if (window.scrollY >= 100)
+      setColor(true)
+    else {
+      setColor(false)
+    }
+  }
+
+  window.addEventListener("scroll", changeColor)
+
   return(
-    <div className="port-header">
+    <div className={color ? "port-header header-bg" : "port-header"}>
       <Link to="/portfolio">
         <h1>Hi! I'm Oreyne</h1>
       </Link>
