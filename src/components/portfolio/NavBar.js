@@ -19,13 +19,13 @@ const NavBar = () => {
           <Link to="/portfolio">Home</Link>
         </li>
         <li>
-          <Link to="/experience">Experience</Link>
+          <Link to="/portfolio/experience">Experience</Link>
         </li>
         <li>
-          <Link to="/training">Training</Link>
+          <Link to="/portfolio/training">Training</Link>
         </li>
         <li>
-          <Link to="/contact">Contact</Link>
+          <Link to="/portfolio/contact">Contact</Link>
         </li>
       </ul>
       <div className="hamburger" onClick={handleClick}>
