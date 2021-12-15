@@ -20,24 +20,23 @@ const NavBar = () => {
 
     return (
         <div className={color ? 'port-header header-bg' : 'port-header'}>
-           <Link to='/portfolio'><h1>Hi! I'm Oreyne</h1></Link> 
+           <Link to='/'><h1>Hi! I'm Oreyne</h1></Link>
            <ul className={click ? 'port-nav-menu active' : 'port-nav-menu'}>
                <li>
-                   <Link to='/portfolio'>Home</Link>
+                   <Link to='/'>Home</Link>
                </li>
                <li>
-                   <Link to='/portfolio/experience'>Experience</Link>
+                   <Link to='/experience'>Experience</Link>
                </li>
                <li>
-                   <Link to='/portfolio/training'>Training</Link>
+                   <Link to='/training'>Training</Link>
                </li>
                <li>
-                   <Link to='/portfolio/contact'>Contact</Link>
+                   <Link to='/contact'>Contact</Link>
                </li>
            </ul>
            <div className='hamburger' onClick={handleClick}>
             {click ? (<FaTimes size={20} style={{color: '#fff'}} />) : (<FaBars size={20} style={{color: '#fff'}} />)}
-               
            </div>
         </div>
     )

@@ -1,24 +1,21 @@
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import AppTracker from './components/indexs/AppTracker'
-import AppMap from './components/indexs/AppMap'
-import AppCryptoCurrency from './components/indexs/AppCryptoCurrency'
-import OfficialDocumentation from './components/indexs/OfficialDocumentation'
-import TemperatureVeridic from './components/indexs/TemperatureVeridic'
-import FilterableProductTable from './components/indexs/FilterableProductTable'
-import Portfolio from './components/indexs/Portfolio'
+
+import Contact from './components/portfolio/Contact'
+import Home from './components/portfolio/Home'
+import Experience from './components/portfolio/Experience'
+import Training from './components/portfolio/Training'
+
+import './css/portfolio/portfolio.css'
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path='/tracker/*' element={<AppTracker />}>Route</Route>
-        <Route path='/map' element={<AppMap />} />
-        <Route path='/currency' element={<AppCryptoCurrency />} />
-        <Route path='/official-docs' element={<OfficialDocumentation />} />
-        <Route path='/temperature' element={<TemperatureVeridic />} />
-        <Route path='/mock' element={<FilterableProductTable />} />
-        <Route path='/portfolio/*' element={<Portfolio />} />
+        <Route path='/' element={<Home />} />
+        <Route path='/experience' element={<Experience />} />
+        <Route path='/training' element={<Training />} />
+        <Route path='/contact' element={<Contact />} />
       </Routes>
     </Router>
   );

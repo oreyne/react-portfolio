@@ -10,19 +10,19 @@ const Footer = () => {
                     <div className='location'>
                         <FaSearchLocation size={20} style={{ color: '#ffffff', marginRight: '2rem' }} />
                         <div>
-                            <p>123 Acme St.</p>
-                            <h4>Houston, Tx</h4>
+                            <p>2 #106 6A Vedado.</p>
+                            <h4>La Habana, Cuba</h4>
                         </div>
                     </div>
                     <div className='phone'>
-                        <h4><FaPhone size={20} style={{ color: '#ffffff', marginRight: '2rem' }} /> 1-800-123-1234</h4>
+                        <h4><FaPhone size={20} style={{ color: '#ffffff', marginRight: '2rem' }} />(+53) 580-52-006</h4>
                     </div>
                     <div className='email'>
-                        <h4><FaMailBulk size={20} style={{ color: '#ffffff', marginRight: '2rem' }} /> trips@galaxy.com</h4>
+                        <h4><FaMailBulk size={20} style={{ color: '#ffffff', marginRight: '2rem' }} />oreynelang14@gmail.com</h4>
                     </div>
                 </div>
                 <div className='right'>
-                    <h4>About the company</h4>
+                    <h4>About me</h4>
                     <p>"Lorem ipsum dolor sit amet, consectetur
                     adipiscing elit, sed do eiusmod tempor
                     incididunt ut labore et dolore magna
