@@ -66,7 +66,7 @@ const AppTracker = () => {
           {tasks.length > 0 ? <Tasks tasks={tasks} onToggle={toggleReminder} onDelete={deleteTask} /> : 'No tasks to show'}
           </>
         } />
-        <Route path='/tracker/about' element={<About />} />
+        <Route path='/about' element={<About />} />
         <Route path='/task/:id' element={<TaskDetails />} />
       </Routes>
       <Footer />

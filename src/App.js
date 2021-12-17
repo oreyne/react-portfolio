@@ -7,6 +7,9 @@ import Experience from './components/portfolio/Experience'
 import Training from './components/portfolio/Training'
 import AppMap from './components/indexs/AppMap'
 import AppCryptoCurrency from './components/indexs/AppCryptoCurrency'
+import AppTracker from './components/indexs/AppTracker'
+import OfficialDocumentation from './components/indexs/OfficialDocumentation'
+import TemperatureVeridic from './components/indexs/TemperatureVeridic'
 
 import './css/portfolio/portfolio.css'
 
@@ -20,6 +23,9 @@ function App() {
         <Route path='/contact' element={<Contact />} />
         <Route path='/project/map' element={<AppMap />} />
         <Route path='/project/currency' element={<AppCryptoCurrency />} />
+        <Route path='/project/tracker/*' element={<AppTracker />} />
+        <Route path='/project/official-docs' element={<OfficialDocumentation />} />
+        <Route path='/project/temperature' element={<TemperatureVeridic />} />
       </Routes>
     </Router>
   );

@@ -63,8 +63,7 @@ const TemperatureVeridic = () => {
       <br />
       <TemperatureInput scale={"f"} temperature={fahrenheit} handleText={handleFahrenheitChange} />
       <br />
-      <BoilingVerdict
-          celsius={parseFloat(celsius)} />
+      <BoilingVerdict celsius={parseFloat(celsius)} />
     </div>
   )
 }

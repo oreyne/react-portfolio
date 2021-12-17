@@ -27,8 +27,12 @@ const TrainingSection = () => {
             <div className="list-tutorial">
               <h2>My own projects</h2>
               <ul>
-                <li><Link to="/project/map" >Map</Link></li>
-                <li><Link to="/project/currency" >Cryptocurrency Tracker</Link></li>
+                <li><Link to="/project/map">Map</Link></li>
+                <li><Link to="/project/currency">Cryptocurrency</Link></li>
+                <li><Link to="/project/tracker">Trask Tracker</Link></li>
+                <li><Link to="/project/official-docs">Example Official Documentation</Link></li>
+                <li><Link to="/project/official-docs">Example Official Documentation</Link></li>
+                <li><Link to="/project/temperature">Temperature</Link></li>
               </ul>
             </div>
         </div>
