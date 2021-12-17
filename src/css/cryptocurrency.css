@@ -35,8 +35,7 @@
   align-items: center;
   flex-wrap: wrap;
   color: #fff;
-  height: 100vh;
-  overflow: scroll;
+  height: 100vh
 }
 
 .crypto-coin {

@@ -19,6 +19,7 @@
 
 .training .right {
     width: 100%;
+    margin-bottom: 1rem;
 }
 
 .right .img-container {
@@ -42,9 +43,19 @@
 }
 
 .right .bottom {
-    grid-column: 4/ -1; 
+    grid-column: 4/ -1;
     grid-row: 1;
     z-index: 5;
+}
+
+.list-tutorial {
+  width: 100%;
+  padding: 1rem;
+  color: #fff;
+}
+
+.list-tutorial h2 {
+  margin-bottom: 1rem;
 }
 
 @media screen and (max-width: 1140px) {
